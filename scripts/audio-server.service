@@ -1,0 +1,16 @@
+[Unit]
+Description=Home Audio Server
+
+[Service]
+Restart=on-failure
+WorkingDirectory=/var/www/swi-audio-server/
+Environment=LANG=en_US.utf8
+UMask=022
+LimitCORE=infinity
+StartLimitInterval=60
+StartLimitBurst=5
+ExecStart=/usr/bin/swipl  /var/www/swi-audio-server/server.pl --port=8000 --keep_alive_timeout=2 --workers=2 --user=ig88
+ExecReload=/bin/kill -s HUP $MAINPID
+
+[Install]
+WantedBy=multi-user.target
