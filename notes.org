@@ -1,0 +1,12 @@
+
+
+
+* Music Repo
+- Music folder exists
+- update music
+  - scans music folder
+  - takes all mp3s immediately
+  - reads all and converts the format of any non mp3 that doesn't have a directly coorelating mp3 that exists already
+  - all finished files are scanned and copied over to a more local directory where it can serve files from.
+- update button will exist on the site
+- 
